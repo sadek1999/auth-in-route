@@ -1,6 +1,6 @@
 import React from 'react';
 
-const singup = () => {
+const Singup = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const singup = () => {
     );
 };
 
-export default singup;
+export default Singup;

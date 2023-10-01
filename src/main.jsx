@@ -10,6 +10,9 @@ import {
 import Main from './Components/Main.jsx';
 import Home from './Components/Home.jsx';
 
+import Login from './Components/login';
+import Singup from './Components/singup.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +21,14 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path:'/longin',
+        element:<Login></Login>
+      },
+      {
+        path:'/singup',
+        element:<Singup></Singup>
       }
     ]
   },
