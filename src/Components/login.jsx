@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
   const handlelogin=e=>{
     e.preventDefault()
+    const name=e.target.name.value;
     const email=e.target.email.value;
     const password =e.target.password.value;
-    console.log(email ,password)
+    console.log(email ,password,name)
   }
 const Login = () => {
     return (
@@ -35,7 +36,7 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <input type="submit" value="Submit" className='btn btn-secondary' />
+                            <input type="submit" value="log in" className='btn btn-secondary' />
                         </div>
                         </form>
                         <p>new ? <Link to={'/singup'}>Sing up</Link></p>
