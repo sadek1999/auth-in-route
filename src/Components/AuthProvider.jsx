@@ -20,12 +20,13 @@ const AuthProvider = ({ children }) => {
    }
 
    const logout = () => {
-      return signOut()
+      return signOut(auth)
    }
 
 
    useEffect(() => {
       const unSubscribe = onAuthStateChanged(auth, currentUser => {
+         console.log("current user ",currentUser)
          setuser(currentUser);
       })
       return () => { unSubscribe(); }

@@ -1,11 +1,18 @@
 import React from 'react';
+import {  signInWithEmailAndPassword } from "firebase/auth";
 import { Link } from 'react-router-dom';
+import auth from '../fiarebase/firebase.config';
+
+
   const handlelogin=e=>{
     e.preventDefault()
     const name=e.target.name.value;
     const email=e.target.email.value;
     const password =e.target.password.value;
     console.log(email ,password,name)
+    signInWithEmailAndPassword(auth, email, password)
+    .then(()=>{console.log("successfully log in")})
+    .catch(error=>console.error(error))
   }
 const Login = () => {
     return (
