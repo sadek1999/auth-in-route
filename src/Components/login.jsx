@@ -11,7 +11,10 @@ import auth from '../fiarebase/firebase.config';
     const password =e.target.password.value;
     console.log(email ,password,name)
     signInWithEmailAndPassword(auth, email, password)
-    .then(()=>{console.log("successfully log in")})
+    .then(()=>{
+        console.log("successfully log in")
+        e.target.reset()
+    })
     .catch(error=>console.error(error))
   }
 const Login = () => {
